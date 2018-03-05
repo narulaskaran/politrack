@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#66A8E5"
+    android:id="@+id/layout">
+
+    <Button
+        android:text="Fetch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:background="#204C9E"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="PoliTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:id="@+id/textView3"
+        android:background="@drawable/back2"
+        android:padding="15dp"
+        android:layout_marginTop="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="State"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/StateSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9dp" />
+    <TextView
+        android:text="District"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/DistrictSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9dp" />
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/StateSpinner"
+        android:entries="@array/states_array"
+        android:textAlignment="center"
+        android:dropDownWidth="match_parent"
+        android:padding="8dp"
+        android:background="@drawable/back2"
+        android:layout_marginBottom="14dp"
+        android:layout_above="@+id/textView5"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/DistrictSpinner"
+        android:textAlignment="center"
+        android:dropDownWidth="match_parent"
+        android:padding="8dp"
+        android:background="@drawable/back2"
+        android:layout_marginBottom="28dp"
+        android:layout_above="@+id/button"
+        android:layout_alignStart="@+id/StateSpinner" />
+</RelativeLayout>

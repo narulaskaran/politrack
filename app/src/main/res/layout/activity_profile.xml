@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cs.teslastem.politrack.ProfileActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileImageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:maxHeight="200dp"
+        android:maxWidth="200dp"
+        android:minHeight="150dp"
+        android:minWidth="150dp" />
+
+    <TextView
+        android:text="STATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stateTextView"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/nameTextView"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:text="P"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/stateTextView"
+        android:layout_alignParentEnd="true"
+        android:textSize="24sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:id="@+id/partyTextView" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/profileImageView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Seniority: X Years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roleTextView"
+        android:layout_alignStart="@+id/roleTextView"
+        android:id="@+id/SeniorityTextView" />
+
+    <TextView
+        android:text="District: X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SeniorityTextView"
+        android:layout_alignStart="@+id/SeniorityTextView"
+        android:id="@+id/DistrictTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/billsSponsoredTextView"
+        android:layout_toEndOf="@+id/billsSponsoredTextView"
+        android:id="@+id/billsTextView" />
+
+    <Button
+        android:text="Facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fbButton"
+        android:layout_alignBaseline="@+id/webButton"
+        android:layout_alignBottom="@+id/webButton"
+        android:layout_toEndOf="@+id/webButton" />
+
+    <Button
+        android:text="Twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/twitterButton"
+        android:layout_alignBaseline="@+id/fbButton"
+        android:layout_alignBottom="@+id/fbButton"
+        android:layout_toEndOf="@+id/fbButton" />
+
+    <Button
+        android:text="NYT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nyTimesButton"
+        android:layout_alignBaseline="@+id/twitterButton"
+        android:layout_alignBottom="@+id/twitterButton"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/twitterButton" />
+
+    <Button
+        android:text="Website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/webButton"
+        android:layout_below="@+id/profileImageView"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/congressSpinner"
+        android:layout_below="@+id/twitterButton"
+        android:layout_toEndOf="@+id/fbButton" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:id="@+id/committeesListView"
+        android:layout_below="@+id/congressSpinner"
+        android:layout_above="@+id/billsTextView"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/back" />
+
+    <TextView
+        android:text="Bills Sponsored:  X   "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/billsSponsoredTextView"
+        android:layout_above="@+id/billsCosponsoredTextView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Bills Cosponsored: X   "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/billsCosponsoredTextView"
+        android:layout_above="@+id/votesWPartyTextView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Votes with Party (%): X%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/votesWPartyTextView"
+        android:layout_above="@+id/missedVotesTextView" />
+
+    <TextView
+        android:text="Missed Votes (%): X%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/missedVotesTextView"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/roleTextView"
+        android:layout_alignBaseline="@+id/nameTextView"
+        android:layout_alignBottom="@+id/nameTextView"
+        android:layout_alignStart="@+id/nameTextView" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTextView"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/stateTextView"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Information By Congress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/fbButton"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
